@@ -20,6 +20,7 @@ export class MyCard extends LitElement {
     this.borderColor = "borderColor";
     this.btnColor = "#808080";
     this.fancy = false;
+    this.description = '';
   }
 
   static get styles() {
@@ -138,10 +139,11 @@ export class MyCard extends LitElement {
     <h3 class="card-title">${this.title}</h3>
     <p class="card-text">${this.text}</p>
     <a href="${this.link}"><button class="btn" style="background-color: ${this.btnColor}">Details</button></a>
+  
+      <slot>$(this.description)</slot>
+  
     </div>
     </section>
-    
-    
     
     </div>`;
   }
@@ -150,6 +152,7 @@ export class MyCard extends LitElement {
     return {
       fancy: { type: Boolean, reflect: true },
       title: { type: String },
+      description: { type: String},
       image: { type: String },
       text: { type: String },
       link: { type: String },
