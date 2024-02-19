@@ -49,7 +49,7 @@ export class MyCard extends LitElement {
       }
       .card {
         width: 300%;
-      }
+      
     }
       
       .pic1 {
@@ -91,7 +91,7 @@ export class MyCard extends LitElement {
         border-radius: 10px;
         padding: 8px;
         margin: 8px;
-        background-color: var(--button-color, #808080);
+        background-color: #808080;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       }
       
@@ -141,15 +141,16 @@ export class MyCard extends LitElement {
 
   render() {
     return html`
-    <div id="mycard" class="bdaycard">
+    <div class="bdaycard">
     <section class="card" style="--border-color: ${this.borderColor};">
     <img src="${this.image}" alt=${this.title}" class="pic1">
     <div class="p">
     <h3 class="card-title">${this.title}</h3>
-    <details ?open="${this.fancy}">
+    <details ?open="${this.fancy}" @toggle="${this.openChanged}">
     <summary>Description</summary>
     <p class="card-text">${this.text}</p>
     <a href="${this.link}"><button class="btn" style="background-color: ${this.btnColor}">Details</button></a>
+    </details>
 
       <slot>$(this.description)</slot>
   
