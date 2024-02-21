@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Boilerplate for polaris chip">
+  <base href="/">
+
+  <style>
+    :root,
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #ededed;
+    }
+    polaris-chip {
+      margin: 16px;
+    }
+
+    h3 {
+      margin: 16px;
+      padding: 8px;
+    }
+
+  </style>
+  <title>polaris-chip / my-card</title>
+</head>
+
+<body>
+  <h1>polaris-chip</h1>
+  <!-- this is going to do whatever the tag's defaults are -->
+  <polaris-chip title= "News of Record" link="https://psu.edu"> </polaris-chip>
+  <polaris-chip title="Faculty and Staff"></polaris-chip>
+  <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
+  <polaris-chip title="Grants and Donations"></polaris-chip>
+
+  <!-- this is going to take the tag and change the title -->
+  <polaris-chip title="Cool stuff"></polaris-chip>
+  
+  <h1>Birthday Ideas</h1>
+  <h2>Buttons</h2>
+  <h3>
+  <button class="duplicate">Clone card</button>
+  <button id="changetitle">Change title</button>
+  <button id ="changeimage">Change image</button>
+  <button id="changebg">Change background</button>
+  <button id="delete">Delete card</button>
+  </h3>
+
+  <div id="cardlist">
+    <my-card title="Throw a Party" image="https://www.retailmenot.com/blog/wp-content/uploads/sites/2/2012/05/how-to-throw-a-party-765x453.jpeg" text="Invite all of your friends to a wild party" link="https://hax.psu.edu" borderColor="#d545ef" btnColor="#808080"></my-card>
+    <my-card title="Take a trip" image="https://th.bing.com/th/id/OIP.xIP9Fgf1uLS2XpCJ7CP23AHaE7?rs=1&pid=ImgDetMain" text="Who wouldnt wanna spend their birthday on a beach?" link="https://hax.psu.edu" borderColor="#5b1527" btnColor="808080"></my-card>
+    <my-card title="Cry?" image="https://imageresizer.static9.net.au/5e_-vjsmMrrpL3qIgmUMEDQj5hU=/696x696/https%3A%2F%2Fprod.static9.net.au%2Ffs%2F11c027d8-68c5-44af-8ff9-42e40a09c9e1" text="It's your birthday you can cry if you want to." link="https://hax.psu.edu" borderColor="#4164bd" btnColor="808080"></my-card>
+    <my-card title="Shopping Spree!" image="https://studyfinds.org/wp-content/uploads/2023/01/Little-girl-shopping-with-lots-of-bags-500x320.jpg" text="Treat yourself to a new closet" link="https://hax.psu.edu" borderColor="#a6dfcf" btnColor="808080"></my-card>
+    <my-card title="Amusement park" image="https://a.cdn-hotels.com/gdcs/production190/d1064/e4a3feb1-e6d8-4325-a4c3-00d2ec1c1684.jpg?impolicy=fcrop&w=800&h=533&q=medium" text="Wanna spend your day eating cotton candy and riding roller-coasters?" link="https://hax.psu.edu" borderColor="#ee9615" btnColor="808080"></my-card>
+  </div>
+
+  <!-- this is what is bringing in the definition for this tag -->
+  <script type="module" src="./src/polaris-chip.js"></script>
+  <script type="module" src="./src/my-card.js"></script>
+
+  <script>
+    document.querySelector('#duplicate').addEventListener('click', function(event) {
+      const cards = document.querySelectorAll('my-card');
+      if (cards.length > 0 && cards.length < 10) {
+        const lastCard = cards[cards.length - 1];
+        const newCard = lastCard.cloneNode(true);
+        document.querySelector('#mycard').appendChild(newCard);
+      }
+    });
+
+    document.querySelector('#changetitle').addEventListener('click', function(e) {
+      const myCard = document.querySelector('my-card');
+      const shadowRoot = myCard.shadowRoot;
+      const titleCard = shadowRoot.querySelector('.card-title');
+      const cardText = shadowRoot.querySelector('.card-text');
+      titleCard.textContent = "YOU JUST GOT KRISSED";
+      cardText.textContent = "#KRISSED";
+    });
+
+    document.querySelector('#changeimage').addEventListener('click', function(e) {
+      const myCard = document.querySelector('my-card');
+      const shadowRoot = myCard.shadowRoot;
+      const cardImage = shadowRoot.querySelector('.pic1');
+      cardImage.setAttribute('src', 'https://th.bing.com/th/id/OIP.p9L6gR1eFEccZzmEty7MxAHaFM?rs=1&pid=ImgDetMain');
+    });
+
+    document.querySelector('#changebg').addEventListener('click', function(e) {
+      const myCards = document.querySelectorAll('my-card');
+
+      myCards.forEach(myCard => {
+        const shadowRoot = myCard.shadowRoot;
+        const cards = shadowRoot.querySelectorAll('.bdayCard');
+        
+        cards.forEach(bdayCard => {
+          bdayCard.classList.toggle('change-color');
+        });
+      });
+    });
+
+    document.querySelector('#delete').addEventListener('click', function(e) {
+      const cards = document.querySelectorAll('my-card');
+      const lastCard = cards[cards.length - 1];
+
+      if (cards.length !== 1) {
+        lastCard.remove();
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>
