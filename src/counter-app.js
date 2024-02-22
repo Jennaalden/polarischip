@@ -22,6 +22,25 @@ export class Counter extends LitElement {
 
   static get styles() {
     return css`
+
+    .counter {
+      font-size: 48px;
+    }
+
+    .max {
+      border: 2px solid pink;
+      border-radius: 5px;
+      padding: 5px;
+      width: 27px;
+    }
+
+    .min {
+      border: 2px solid purple;
+      border-radius: 5px;
+      padding: 5px;
+      width: 27px;
+    }
+
     :host([counter="18"]) .text {
       color: blue;
     }
