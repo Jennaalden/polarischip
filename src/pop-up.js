@@ -68,8 +68,43 @@ static get styles() {
             return html `
             <!-- <div class="closed-button-toggle" @click="${this.toggleAlert}> -->
             <div>This is closed</div>
-    
             `; }
+
+            render() {
+                let color = "white";
+                if(this.issueLevel === "notice") color = "green";
+                if(this.issueLevel === "Warning") color = "yellow";
+                if(this.issueLevel === "Alert") color = "red";
+                if(this.issueLevel === "Welcome") color = "blue";
+
+                if(this.issueLevel === "notice") (this.message) = "Just so your aware look out for this today:)";
+                if(this.issueLevel === "Welcome") (this.message) = "Welcome to this page!";
+                if(this.issueLevel === "Warning") (this.message) = "Warning proceede with caution!";
+                if(this.issueLevel === "Alert") (this.message) = "This is an ALERT! This is an EMERGENCY!";
+                return (this.opened) ? this.openedView(color) : this.closedView();
+            }
+
+            .static get properties() {
+                return {
+                    issueLevel: {type: String},
+                    message: {type: String},
+                    sticky: {type: Boolean},
+                    opened: {type: Boolean, reflect: true},
+                };
+            }
+
+            toggle() {
+                this.opened = !this.opened;
+                if (!this.opened) {
+                    localStorage.setItem('alertClosed', 'true');
+                }
+                else{
+                    localStorage.removeItem('alertClosed');
+                }
+                const oppButton = this.shadowRoot.querySelector('.btn'); {
+                    oppButton.focus();
+                }
+            }
 
 
 
