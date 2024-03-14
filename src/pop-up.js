@@ -66,7 +66,7 @@ static get styles() {
 
         closedView() {
             return html `
-            <!-- <div class="closed-button-toggle" @click="${this.toggleAlert}> -->
+             
             <div>This is closed</div>
             `; }
 
@@ -84,7 +84,7 @@ static get styles() {
                 return (this.opened) ? this.openedView(color) : this.closedView();
             }
 
-            .static get properties() {
+            static get properties() {
                 return {
                     issueLevel: {type: String},
                     message: {type: String},
