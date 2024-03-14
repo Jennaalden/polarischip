@@ -66,7 +66,8 @@ static get styles() {
 
         closedView() {
             return html `
-             
+             <div class="closedContainer ${(this.sticky) ? "sticky" : ""}">
+             <div class="closed-button" @click="${this.alertClosed}">
             <div>This is closed</div>
             `; }
 
