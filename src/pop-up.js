@@ -3,7 +3,7 @@ import { LitElement, html, css } from 'lit';
 export class popup extends LitElement {
 
 static get tag() {
-    return 'alert-message';
+    return 'pop-up';
 }
 
 
@@ -12,6 +12,11 @@ constructor() {
     this.message = "This is an alert message.";
     this.sticky = false;
     this.opened = true;
+    if(localStorage.getItem("pop-up-opened") === 'false'){
+        this.opened = false;
+    }
+
+
     this.date = '';
     this.issueLevel = "";
 }
@@ -20,6 +25,12 @@ static get styles() {
     return css`
     :host {
         font-size: 15px;
+        width: 100%;
+        height: 200px;
+    }
+
+    body{
+        height: 200px;
         width: 100%;
     }
 
@@ -52,6 +63,7 @@ static get styles() {
 
     toggleAlert() {
         this.opened = !this.opened;
+        localStorage.setItem("pop-up-opened", this.opened);
     }
 
     openedView(color) {
@@ -64,12 +76,13 @@ static get styles() {
     </div>
         `; }
 
-        closedView() {
-            return html `
-             <div class="closedContainer ${(this.sticky) ? "sticky" : ""}">
+    closedView() {
+        return html `
+            <div class="closedContainer ${(this.sticky) ? "sticky" : ""}">
              <div class="closed-button" @click="${this.alertClosed}">
+             <button @click="${this.toggleAlert}">Open</button>
             <div>This is closed</div>
-            `; }
+    `; }
 
             render() {
                 let color = "white";
