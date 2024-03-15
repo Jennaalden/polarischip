@@ -42,12 +42,14 @@ static get styles() {
 
     .alert-message {
         font-size: 20px;
+        transition: opacity 0.3s ease-in-out;
         padding: 15px;
         margin: 15px;
         display: block;
         box-shadow: 0 0 15px 5px #ccc;
         
     }
+
 
     .message {
         font-size: 20px;
@@ -73,8 +75,7 @@ static get styles() {
         <div class="alert-message ${(this.sticky) ? "sticky" : ""}" style="background-color:${color}">
         <p class="message">${this.message}</p>
         <p class="date">${this.date}</p>
-        <button @click="${this.toggleAlert}">Close</button>
-
+        <button @click="${this.toggleAlert}">Close</button></div>
     </div>
         `; }
 
