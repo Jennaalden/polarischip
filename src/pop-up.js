@@ -45,18 +45,20 @@ static get styles() {
         padding: 15px;
         margin: 15px;
         display: block;
+        box-shadow: 0 0 15px 5px #ccc;
+        
     }
 
     .message {
         font-size: 20px;
-        color: red;
+        color: black;
     }
 
     .closed-button-toggle {
         display: flex;
+        font-weight: bold;
         align-items: center;
-        background-color: green;
-        font-size: 20px;
+        font-size: 30px;
         padding: 30px;
     }
     `; }
