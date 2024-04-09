@@ -7,7 +7,7 @@ import "@lrnwebcomponents/multiple-choice/lib/confetti-container.js";
 export class eventParty extends DDD {
 
   static get tag() {
-    return 'party-ui';
+    return 'event-party';
   }
 
   constructor(){
@@ -41,37 +41,35 @@ export class eventParty extends DDD {
       }
       .party-start {
         font-family: "Press Start 2P", sans-serif;
-        background-color: #1D1D1D;
+        background-color: #F9DBBD;
         text-align: center;
-        border: 8px solid #e0e0e0; 
-        /* border-radius: var(--ddd-radius-sm); */
+        border: 8px solid #A53860;
         box-sizing: border-box;
         padding: 20px;
       }
 
       .party-ui-modal {
-        background-color: #1e1e1e;
+        background-color: #F9DBBD;
         font-family: "Press Start 2P", sans-serif;
         text-align: center;
         width: 70vw;
         border: 2px solid var(--ddd-theme-default-success); 
-        /* border-radius: var(--ddd-radius-sm); */
         box-sizing: border-box;
         padding: 20px;
-        border: 8px solid #fcf0d6;
-        box-shadow: #7f7b72 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, 0px 15px 0px #c1baac;
+        border: 8px solid #A53860;
+        box-shadow: #000c0f 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, 0px 15px 0px #000c0f;
 
       }
       .usrtitle {
         text-shadow: 0px 6px 10px #000000b8, 2px 4px 0px #0d0d0d9f;
-        background: #b1b6b3;
+        background: #fbd5d5;
         border: 3px solid #fcf0d6;
         padding: 10px; 
         transition: border-color 0.3s ease;  
         margin: 10px 0px 20px 0px;
-        background-color: #D53636 ;
-        color: #fcf0d6;
-        box-shadow: 0px 14px 0px #d5363676, -10px 34px 15px #00000069;
+        background-color: #FFA5AB;
+        color: #b44275;
+        box-shadow: 0px 14px 0px #fbd5d5, -10px 34px 15px #00000069;
       }
 
       .party-ui-controls {
@@ -79,13 +77,12 @@ export class eventParty extends DDD {
         font-family: "Press Start 2P", sans-serif;
         width: 100%;
         height: 25%;
-        /* border-radius: var(--ddd-radius-sm); */
         position: relative;
         margin: 0px;
-        color: #fcf0d6;
+        color: #fbd5d5;
       }
       .inputadd {
-        background-color: #b1b6b3;
+        background-color: #fbd5d5;
         border: 4px solid #fcf0d6;
         box-shadow: 0px 10px 0px #b1b6b31b, 0px 10px 2px #00000069;
         padding-bottom: 10px;
@@ -94,11 +91,10 @@ export class eventParty extends DDD {
       .party-ui-users-scroll {
         overflow-y: scroll;
         display: flex;
-        /* overflow: auto; */
         white-space: nowrap;
         justify-content: center;
-        background-color: #1e1e1e;
-        box-shadow: #000000 0px 30px 60px -12px inset, #000000 0px 18px 36px -18px inset;
+        background-color: #DA627D;
+        box-shadow: #e057de 0px 30px 60px -12px inset, #000000 0px 18px 36px -18px inset;
       }
 
       .partyui-user-container {
@@ -107,13 +103,9 @@ export class eventParty extends DDD {
         flex-direction: column;
         padding: 16px;
         cursor: pointer;
-        /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
-
-
       }
 
       .partyui-user-container:hover {
-        /* transition: .3s; */
         box-sizing: border-box;
         border: solid #fdf5e3 6px;
         padding: 10px;
@@ -122,14 +114,13 @@ export class eventParty extends DDD {
 
       .input {
          background: #fcf0d6;
-         border: 3px solid #fcf0d6; 
-         /* border-radius: var(--ddd-radius-sm); */
+         border: 3px solid #fcf0d6;
          padding: 10px; 
          font-size: 16px; 
          font-family: "Press Start 2P", sans-serif;
          transition: border-color 0.3s ease;  
          margin: 10px 0px 20px 0px;
-         box-shadow: #7f7b72 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, 0px 20px 0px #c1baac, -10px 34px 4px #00000069;
+         box-shadow: #DA627D 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, 0px 20px 0px #c1baac, -10px 34px 4px #00000069;
         }
 
        svg {
@@ -155,21 +146,21 @@ export class eventParty extends DDD {
         margin: 5px;
         cursor: pointer;
         box-shadow: 0px 15px 0px #5c8763, -4px 28px 2px #00000069;
-        cursor: pointer;
+        cursor: grab;
 
       }
 
       .removeBTN {
-        background-color: #782121 ;
+        background-color: #FFA5AB;
         color: #fcf0d6e8;
-        box-shadow: 0px 14px 0px #8324248b, -4px 28px 2px #00000069;
+        box-shadow: 0px 14px 0px #fbd5d5, -4px 28px 2px #00000069;
         font-family: "Press Start 2P", sans-serif;
         font-size: 16px;
         border: 3px solid #fcf0d6a9;
         /* border-radius: var(--ddd-radius-sm); */
         padding: 10px 20px;
         margin: 12px;
-        cursor: pointer;
+        cursor: grab;
       }
       .bottom-area {
         background-color: #b1b6b3;
@@ -181,7 +172,7 @@ export class eventParty extends DDD {
       }
 
       .saveBTN {
-        background-color: #D53636;
+        background-color: #FFA5AB;
         color: #fcf0d6;
         font-family: "Press Start 2P", sans-serif;
         font-size: 16px;
@@ -190,12 +181,12 @@ export class eventParty extends DDD {
         padding: 20px 20px;
         /* margin-bottom: 24px; */
         cursor: pointer;
-        box-shadow: 0px 15px 0px #832424, -4px 28px 2px #00000069;
+        box-shadow: 0px 15px 0px #fbd5d5, -4px 28px 2px #00000069;
         text-shadow: 2px 2px 2px #00000035;
         
       }
       .details {
-        color: #D53636;
+        color: #6a0446;
         font-size: 12px;
         padding-bottom: 12px;
       }
@@ -206,7 +197,7 @@ export class eventParty extends DDD {
       
       .randomBTN {
         color: #fcf0d6;
-        background-color: #2c2aaa;
+        background-color: #A53860;
         font-family: "Press Start 2P", sans-serif;
         font-size: 16px;
         border: 3px solid #fcf0d6;
@@ -214,7 +205,7 @@ export class eventParty extends DDD {
         padding: 10px 20px;
         margin: 12px;
         cursor: pointer;
-        box-shadow: 0px 16px 0px #1a1458, -10px 20px 15px #0000009a;
+        box-shadow: 0px 16px 0px #e34c84c5, -10px 20px 15px #0000009a;
       }
     
       .addBTN:hover, .removeBTN:hover, .saveBTN:hover, .randomBTN:hover {
@@ -363,7 +354,7 @@ export class eventParty extends DDD {
     <button class="randomBTN">START A PARTY</button>
   </div>
     <div class="party-ui">
-      <confetti-container id="confetti">
+          <confetti-container id="confetti">
       <div class="party-ui-modal">
         <div class="party-ui-controls">
             <div>
@@ -380,14 +371,11 @@ export class eventParty extends DDD {
             <svg @click="${this.toggleAlert}" viewBox="-3.6 -3.6 31.20 31.20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke=var(--ddd-theme-default-original87Pink) transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.00386 9.41816C7.61333 9.02763 7.61334 8.39447 8.00386 8.00395C8.39438 7.61342 9.02755 7.61342 9.41807 8.00395L12.0057 10.5916L14.5907 8.00657C14.9813 7.61605 15.6144 7.61605 16.0049 8.00657C16.3955 8.3971 16.3955 9.03026 16.0049 9.42079L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.0039C15.6133 16.3945 14.9802 16.3945 14.5896 16.0039L12.0057 13.42L9.42097 16.0048C9.03045 16.3953 8.39728 16.3953 8.00676 16.0048C7.61624 15.6142 7.61624 14.9811 8.00676 14.5905L10.5915 12.0058L8.00386 9.41816Z" fill=var(--ddd-theme-default-original87Pink)></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z" fill=var(--ddd-theme-default-original87Pink)></path> </g></svg>
         </div>
 
-        <!-- <div class="bottom-title">
-          Users in the Party
-        </div> -->
         <div class="party-ui-users-scroll">
           <!-- Sample person -->
           <div class="partyui-user-container">
-            <rpg-character seed="drl5505"></rpg-character>
-            <div id='usrdemo'>drl5505</div>
+            <rpg-character seed="user"></rpg-character>
+            <div id='usrdemo'>user</div>
             <div>
               <button class="removeBTN" @click=${this.deleteUser}>delete -</button>
             </div>
