@@ -31,7 +31,8 @@ export class eventParty extends DDD {
         width: 100%;
         height: 100%;
         position: relative;
-        top: 80px; left: 0px;
+        top: 10px; 
+        left: 0px;
         z-index: 9999;
         display: flex;
         justify-content: center;
@@ -40,41 +41,39 @@ export class eventParty extends DDD {
         color: var(--ddd-theme-default-slateGray);
       }
       .party-start {
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         background-color: #F9DBBD;
         text-align: center;
-        border: 8px solid #A53860;
-        box-sizing: border-box;
+        border: 5px dotted #A53860;
+        border-radius: 15px;
         padding: 20px;
       }
 
       .party-ui-modal {
         background-color: #F9DBBD;
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         text-align: center;
         width: 70vw;
         border: 2px solid var(--ddd-theme-default-success); 
         box-sizing: border-box;
         padding: 20px;
-        border: 8px solid #A53860;
-        box-shadow: #000c0f 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, 0px 15px 0px #000c0f;
-
+        border: 5px dotted #A53860;
+        border-radius: 15px;
       }
       .usrtitle {
-        text-shadow: 0px 6px 10px #000000b8, 2px 4px 0px #0d0d0d9f;
         background: #fbd5d5;
-        border: 3px solid #fcf0d6;
+        border: 3px double #fcf0d6;
         padding: 10px; 
         transition: border-color 0.3s ease;  
-        margin: 10px 0px 20px 0px;
+        margin: 10px 0 20px;
         background-color: #FFA5AB;
         color: #b44275;
-        box-shadow: 0px 14px 0px #fbd5d5, -10px 34px 15px #00000069;
+        box-shadow: 0px 14px 0px #fbd5d5, -10px 34px 15px #62626269;
       }
 
       .party-ui-controls {
         background-color: none;
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         width: 100%;
         height: 25%;
         position: relative;
@@ -83,7 +82,7 @@ export class eventParty extends DDD {
       }
       .inputadd {
         background-color: #fbd5d5;
-        border: 4px solid #fcf0d6;
+        border: 4px double #fcf0d6;
         box-shadow: 0px 10px 0px #b1b6b31b, 0px 10px 2px #00000069;
         padding-bottom: 10px;
       }
@@ -91,14 +90,14 @@ export class eventParty extends DDD {
       .party-ui-users-scroll {
         overflow-y: scroll;
         display: flex;
-        white-space: nowrap;
+        border: 4px double #fcf0d6;
         justify-content: center;
         background-color: #DA627D;
         box-shadow: #e057de 0px 30px 60px -12px inset, #000000 0px 18px 36px -18px inset;
       }
 
       .partyui-user-container {
-        font-family: "Press Start 2P", sans-serif;
+        font-family:  monospace;
         color: #fcf0d6;
         flex-direction: column;
         padding: 16px;
@@ -117,7 +116,7 @@ export class eventParty extends DDD {
          border: 3px solid #fcf0d6;
          padding: 10px; 
          font-size: 16px; 
-         font-family: "Press Start 2P", sans-serif;
+         font-family: monospace;
          transition: border-color 0.3s ease;  
          margin: 10px 0px 20px 0px;
          box-shadow: #DA627D 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, 0px 20px 0px #c1baac, -10px 34px 4px #00000069;
@@ -132,16 +131,15 @@ export class eventParty extends DDD {
         height: 35px;
         width: 35px;
         cursor: pointer;
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         font-size: 3rem;
         margin: 5px;
       }
       .addBTN {
         background-color: #7dd089;
         color: #fcf0d6;
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         border: 3px solid #fcf0d6;
-        /* border-radius: var(--ddd-radius-sm); */
         padding: 15px 20px;
         margin: 5px;
         cursor: pointer;
@@ -154,10 +152,9 @@ export class eventParty extends DDD {
         background-color: #FFA5AB;
         color: #fcf0d6e8;
         box-shadow: 0px 14px 0px #fbd5d5, -4px 28px 2px #00000069;
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         font-size: 16px;
         border: 3px solid #fcf0d6a9;
-        /* border-radius: var(--ddd-radius-sm); */
         padding: 10px 20px;
         margin: 12px;
         cursor: grab;
@@ -174,12 +171,10 @@ export class eventParty extends DDD {
       .saveBTN {
         background-color: #FFA5AB;
         color: #fcf0d6;
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         font-size: 16px;
         border: 3px solid #fdf5e28b;
-        /* border-radius: var(--ddd-radius-sm); */
         padding: 20px 20px;
-        /* margin-bottom: 24px; */
         cursor: pointer;
         box-shadow: 0px 15px 0px #fbd5d5, -4px 28px 2px #00000069;
         text-shadow: 2px 2px 2px #00000035;
@@ -198,10 +193,9 @@ export class eventParty extends DDD {
       .randomBTN {
         color: #fcf0d6;
         background-color: #A53860;
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         font-size: 16px;
         border: 3px solid #fcf0d6;
-        /* border-radius: var(--ddd-radius-sm); */
         padding: 10px 20px;
         margin: 12px;
         cursor: pointer;
@@ -215,24 +209,18 @@ export class eventParty extends DDD {
 
       .saveBTN:active, .addBTN:active, .removeBTN:active, .randomBTN:active {
         -webkit-box-shadow: -2px 5px 0px #00000035, 0px 3px 6px #00000035;
-        /* -moz-box-shadow: 0px 3px 0px #0000002a, 0px 3px 6px #000000; */
         position: relative;
         top: 10px;
       }
 
       .bottom-title {
         background-color: white;
-      
         color: black;
-        font-family: "Press Start 2P", sans-serif;
+        font-family: monospace;
         font-size: 16px;
         font-weight: var(--ddd-font-navigation-bold);
         margin: 20px;
       }
-      /* .user-name {
-        margin: 8px;
-      } */
-
     `;
   }
 
