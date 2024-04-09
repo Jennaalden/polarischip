@@ -106,7 +106,8 @@ export class eventParty extends DDD {
 
       .partyui-user-container:hover {
         box-sizing: border-box;
-        border: solid #fdf5e3 6px;
+        border: ridge #fdf5e3 6px;
+        border-radius: 8px;
         padding: 10px;
 
       }
@@ -163,7 +164,7 @@ export class eventParty extends DDD {
         background-color: #b1b6b3;
         padding-bottom: 20px;
         padding-top: 5px;
-        border: 4px solid #fcf0d6;
+        border: 4px double #fcf0d6;
         box-shadow: 0px 10px 0px #b1b6b31b, -10px 28px 4px #00000069;
 
       }
